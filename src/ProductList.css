@@ -1,3 +1,5 @@
+
+
 /* Reset some default styles */
 body, h1, ul {
     margin: 0;
@@ -160,18 +162,71 @@ body {
     width: 650px;
     font-size: 19px;
 }
+
+/* Horizontal lines for section titles */
+.category-section h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    position: relative;
+    color: #333;
+  }
+  
+  .category-section h2::before,
+  .category-section h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 2px;
+    background-color: #ccc;
+  }
+  
+  .category-section h2::before {
+    left: -60px;
+  }
+  
+  .category-section h2::after {
+    right: -60px;
+  }
+/*
 .cart{
     color: white;
     display: flex;
 }
 .cart_quantity_count{
     margin-top: 16px;
-    /* background-color: red; */
     margin-left: 27px;
     position: absolute;
     font-size: 29px;
 
 }
+*/
+.cart {
+    color: white;
+    display: flex;
+    position: relative; /* Enables absolute positioning for the badge */
+    align-items: center;
+    justify-content: center;
+}
+
+.cart_quantity_count {
+    position: absolute;
+    top: 50%; /* Vertically centers the badge */
+    left: 50%; /* Horizontally centers the badge */
+    transform: translate(-50%, -50%); /* Adjusts positioning to truly center the badge */
+    /*background-color: red; /* Badge background color */
+    color: white; /* Badge text color */
+    font-size: 14px; /* Font size for the quantity */
+    font-weight: bold;
+    border-radius: 50%; /* Makes the badge circular */
+    padding: 5px 10px; /* Adjust padding for better appearance */
+    min-width: 20px; /* Ensures a consistent circular shape */
+    text-align: center;
+    line-height: 1; /* Ensures text is vertically centered inside the badge */
+}
+
 .plantname_heading{
    display: flex;
    align-items: center;
